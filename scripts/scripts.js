@@ -178,10 +178,10 @@ const accordionBlok = () =>{
 const getAccordeon = (index) => {
       for (let i = 0; i < elementContent.length; i++) {
           if (index === i) {
-            accordeonTitle[i].classList.toggle('active');
+            accordeonTitle[i].parentElement.classList.add('active');
             elementContent[i].style.display = 'block';
           } else {
-            accordeonTitle[i].classList.toggle('active');
+            accordeonTitle[i].parentElement.classList.remove('active');
             elementContent[i].style.display = 'none';
           }
       }
